@@ -6,25 +6,51 @@ body {
 }
 
 header {
-    background: linear-gradient(to right, red, orange, yellow, green, rgb(0, 174, 255), blue, purple);
+    background-color: black;
     color: lightgreen;
     padding: 10px;
     font-size: 16pt;
+    transition: 1s;
+}
+
+header:hover {
+    background: linear-gradient(to right top, green, purple, orange);
+    font-size: 20pt;
+    transition: 0.5s 150ms;
+}
+
+header:active {
+    background: linear-gradient(to right, red, orange, yellow, green, rgb(0, 174, 255), blue, purple);
+    color: black;
+    transition: 0.5s 150ms;
 }
 
 footer {
-    background: linear-gradient(to right, red, orange, yellow, green, rgb(0, 174, 255), blue, purple);
+    background-color: black;
     color: lightgreen;
     padding: 10px;
     font-size: 16pt;
     font-style: italic;
     text-align: right;
+    transition: 1s;
+}
+
+footer:hover {
+    background: linear-gradient(to left bottom, green, purple, orange);
+    font-size: 20pt;
+    transition: 0.5s 150ms;
+}
+
+footer:active {
+    background: linear-gradient(to left, red, orange, yellow, green, rgb(0, 174, 255), blue, purple);
+    color: black;
+    transition: 0.5s 150ms;
 }
 
 a {
     text-decoration: none;
     color: rgb(41, 129, 41);
-    transition: 2.5s 200ms;
+    transition: 2s 200ms;
     text-shadow: 3px 3px 2px gray;
 }
 
