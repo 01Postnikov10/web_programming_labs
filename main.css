@@ -22,5 +22,22 @@ footer {
 }
 
 a {
-    text-decoration: none; color: rgb(41, 129, 41);
+    text-decoration: none;
+    color: rgb(41, 129, 41);
+}
+
+a:visited {
+    color:rgb(139, 12, 141);
+}
+
+a:hover {
+    color: red;
+    text-decoration: underline;
+    background-color: white;
+    font-weight: bold;
+}
+
+a:active {
+    color: pink;
+    background-color: green;
 }
