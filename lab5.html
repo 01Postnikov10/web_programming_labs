@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Постников Кирилл Николаевич. Лабораторная работа 5</title>
+    <link rel="stylesheet" href="main.css">
+    <script>
+        function showSum() {
+            let inputA = document.getElementById('numberA'); 
+            // здесь мы обращаемся к глобальному объекту и используем метод
+            let inputB = document.getElementById('numberB');
+            let a = parseInt(inputA.value);
+            let b = parseInt(inputB.value); 
+            // parseInt переводит строчное значение в числовое
+            let result = a + b;
+            alert('Сумма ' + a + ' и ' + b + ' равна '+ result);
+// слово let означает "создать переменную"
+//  alert – она просто выводит на экран требуемое сообщение:
+        }
+        function showRazn () { 
+            let inputA = document.getElementById('numberA'); 
+            let inputB = document.getElementById('numberB'); 
+            let a = parseInt(inputA.value); 
+            let b = parseInt(inputB.value); 
+            let result = a - b; 
+            alert('Разность ' +a+ ' и ' +b+ ' равна ' + result) ; 
+        }
+        function showDel(){
+            let inputA = document.getElementById('numberA');
+            let inputB = document.getElementById('numberB');
+
+            let a = parseInt(inputA.value);
+            let b = parseInt(inputB.value);
+            let result = a / b;
+            alert('Деление '+ a + ' на '+ b + ' равна ' +  result);
+        }
+        function showUmn(){
+            let inputA = document.getElementById('numberA');
+            let inputB = document.getElementById('numberB');
+
+            let a = parseInt(inputA.value);
+            let b = parseInt(inputB.value);
+            let result = a * b;
+            alert('Произведение '+ a + ' и '+ b + ' равна ' +  result);
+        }
+        function showAuthor() {
+            let author = "Автор страницы:\nПостников Кирилл Николаевич\nУ студента нет цели, есть только путь, тяжелый и невыносимый путь...";
+            alert(author);
+        }
+        function changeOutput(buttomNum, backColor, textColor, borderColor) {
+            let output = document.getElementById('output');
+            output.innerHTML = 'Нажата кнопка'+ buttomNum;
+            output.style.backgroundColor = backColor;
+            output.style.color = textColor;
+            output.style.borderColor = borderColor;
+        }
+        function Korz(){
+            let inputA = document.getElementById('numA');
+            let inputB = document.getElementById('numB');
+            let inputC = document.getElementById('numC');
+            let inputD = document.getElementById('numD');
+
+            let a = parseInt(inputA.value);
+            let b = parseInt(inputB.value);
+            let c = parseInt(inputC.value);
+            let d = parseInt(inputD.value);
+            let result = a*100 + b*80 + c*150 + d*300;
+            let output1=document.getElementById('output1')
+            output1.innerHTML = 'Общая цена ' + result + 'p.'
+            
+        }
+        function removekrugi(number) {
+            let del = document.getElementById(number)
+            del.style.opacity = '0'
+        }   
+    </script>
+    <style>
+        .message {
+            display: inline-block;
+            cursor: pointer;
+            color: maroon;
+            background-color: gray;
+            text-align: center;
+            border: 1px solid;
+            text-indent: 0;
+            margin: 10px 40px 10px 10px;
+            padding: 5px;
+        }
+        #output {
+            border: 5px solid;
+            width: 300px;
+            height: 40px;
+        }
+        .korzina {
+            cursor: pointer;
+            
+            height: 350px;
+            width: 300px;
+            padding: 7px;
+            background-color: greenyellow;
+            border-color: black;
+            border: 1px solid;
+            border-radius: 7px;
+            display: inline-block;
+
+        }
+        
+        .krugi div {
+            display: inline-block;
+            width: 70px;
+            height: 70px;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 35px;
+            line-height: 67px;
+            margin-right: 20px;
+            color: #fff;
+            font-weight: bold;
+            margin-top: 30px;
+            border: 1px solid;
+            }
+
+        .krug1 {
+            background-color: rgb(30, 43, 43);
+        }
+        .krug2 {
+            background-color: red;
+        }
+        .krug3 {
+            background-color: green;
+        }
+        .krug4 {
+            background-color: rgb(150, 85, 150);
+        }
+        .krug5 {
+            background-color: Olive;
+        }
+        .krug6 {
+            background-color: rgb(14, 117, 14);
+        }
+        .krug7 {
+            background-color: Blue;
+        }
+        .krug8 {
+            background-color: aquamarine;
+        }
+        .krug9 {
+            background-color: rgb(251, 238, 67);
+        }
+        .krug10 {
+            background-color: rgb(122, 15, 69);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        НГТУ, ФБ, Лабораторная работа 5
+    </header>
+    
+    <main>
+        <label>Первое число: <input type="number" value="5154" id="numberA"></label><br> 
+        <!-- Label дополнительная функциональность, для фокуса не только на поле ввода но и на текст "Первое число" -->
+        <!-- value – это значение, которое будет отображаться в поле ввода при загрузке страницы. Если value не указывать, то поле ввода изначально будет пустым: -->
+
+        <label>Второе число: <input type="number" value="7891" id="numberB"></label><br>
+        <div class="message" onclick="showAuthor()">Узнать, кто автор страницы</div>
+        <div class="message" onclick="showSum()">Найти сумму чисел</div>
+        <!-- Чтобы запустить какой-то код при нажатии используется атрибут onclick – в него просто прописывается нужная функция: -->
+        <div class="message" onclick="showRazn()">Найти разность чисел</div>
+        <div class="message" onclick="showDel()">Найти деление</div>
+        <div class="message" onclick="showUmn()">Найти произведение</div>
+        <div>
+            <input type="button" value="Кнопка 1" onclick="changeOutput(1, 'red', 'yellow', 'Fuchsia')">
+            <input type="button" value="Кнопка 2" onclick="changeOutput(2, 'black', 'lime', 'Silver')">
+            <input type="button" value="Кнопка 3" onclick="changeOutput(3, 'yellow', 'purple', 'Aqua')">
+            <input type="button" value="Кнопка 4" onclick="changeOutput(4, 'green', 'Magenta', 'MidnightBlue')">
+        </div>
+        <div id="output"></div>
+
+        <div class="korzina"> <h2>Корзина Товаров</h2> 
+            Яблоки 100р/шт
+            <div><input type="number" value="0" id="numA"></div><br>
+               <br>
+            <div>Груши 80р/шт</div>
+            <label><input type="number" value="0" id="numB"></label><br>
+               <br>
+            <div>Апельсины 150р/шт</div>
+            <label><input type="number" value="0" id="numC"></label><br>
+               <br>
+            <div>Дыни 300р/шт</div>
+            <label><input type="number" value="0" id="numD"></lable><br>
+               <br>
+            <label> <input type="button" value="Рассчитать" onclick="Korz()"></label><br>
+             <br>
+            <div id="output1"> </div>
+           </div>
+
+           <div class="krugi">
+            <div class="krug1" id="1" onclick="removekrugi('1')">1</div>
+            <div class="krug2" id="2" onclick="removekrugi('2')">2</div>
+            <div class="krug3" id="3" onclick="removekrugi('3')">3</div>
+            <div class="krug4" id="4" onclick="removekrugi('4')">4</div>
+            <div class="krug5" id="5" onclick="removekrugi('5')">5</div>
+            <div class="krug6" id="6" onclick="removekrugi('6')">6</div>
+            <div class="krug7" id="7" onclick="removekrugi('7')">7</div>
+            <div class="krug8" id="8" onclick="removekrugi('8')">8</div>
+            <div class="krug9" id="9" onclick="removekrugi('9')">9</div>
+            <div class="krug10" id="10" onclick="removekrugi('10')">10</div>
+            </div>
+    </main>
+
+    <footer onclick="showAuthor()">
+        &copy; Постников Кирилл, ФБИ-14, 2 курс, 2023
+    </footer>
+</body>
+</html>
