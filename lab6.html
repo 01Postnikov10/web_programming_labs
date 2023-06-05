@@ -162,6 +162,14 @@
             }
           }
         }
+        function block(x) {
+            if(parseInt(x.style.width)<=1000){
+                x.style.width = parseInt(x.style.width) +50 + 'px';
+            }
+            else {
+                x.style.width = '100px'
+            }
+        }
     </script>
 </head>
 <body>
