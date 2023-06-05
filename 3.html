@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Постников Кирилл Николаевич. РГЗ</title>
+    <link rel="stylesheet" href="RGZ.css">
+</head>
+<body>
+    <header>
+        <h1>ПАО «Центральный телеграф». Контактная информация</h1>
+    </header>
+    <nav>
+        <a href="1.html">О компании</a>
+        <a href="2.html">Основные финансовые показатели</a>
+        <a href="3.html" class="active">Контактные данные</a>
+        <a href="4.html">Видео</a>
+    </nav>
+      
+    <script type="text/javascript">
+        window.onscroll = function() {myFunction()};
+      
+        var navbar = document.getElementsByTagName("nav")[0];
+        var sticky = navbar.offsetTop;
+      
+       function myFunction() {
+         if (window.pageYOffset >= sticky) {
+           navbar.classList.add("sticky")
+         } else {
+           navbar.classList.remove("sticky");
+         }
+       }
+      </script>
+    <main>
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1424.2647141187022!2d37.61735434422875!3d55.74184171482943!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54affd9094bff%3A0x96edb30455a9b2a3!2z0JzQsNC70YvQuSDQotC-0LvQvNCw0YfQtdCy0YHQutC40Lkg0L_QtdGALiwgNiDRgdGC0YDQvtC10L3QuNC1IDEsINCc0L7RgdC60LLQsCwgMTE5MDE3!5e0!3m2!1sru!2sru!4v1685981209775!5m2!1sru!2sru" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+        <h2><u>Реквизиты</u></h2>
+            <div>Юридический адрес: 108811, Г. МОСКВА, П. МОСКОВСКИЙ, 22 КМ. КИЕВСКОГО Ш., Д.6, СТР.1, ПОМЕЩ. D1-220</div>
+            <div>Телефон: (495) 504-4444</div>
+            <div>Почта: CNT@CNT.RU</div>
+    </main>
+    <footer>
+    </footer>
+</body>
+</html>

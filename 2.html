@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Постников Кирилл Николаевич. РГЗ</title>
+    <link rel="stylesheet" href="RGZ.css">
+    <style>
+        th {
+            width: 30%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Основные финансовые показатели</h1>
+    </header>
+    <nav>
+        <a href="1.html">О компании</a>
+        <a href="2.html" class="active">Основные финансовые показатели</a>
+        <a href="3.html">Контактные данные</a>
+        <a href="4.html">Видео</a>
+    </nav>
+      
+    <script type="text/javascript">
+        window.onscroll = function() {myFunction()};
+      
+        var navbar = document.getElementsByTagName("nav")[0];
+        var sticky = navbar.offsetTop;
+      
+       function myFunction() {
+         if (window.pageYOffset >= sticky) {
+           navbar.classList.add("sticky")
+         } else {
+           navbar.classList.remove("sticky");
+         }
+       }
+      </script>
+
+    <main>
+            <div>
+                Рыночная капитализация на 1 квартал 2023 года: <b>3.347 млрд. рублей.</b>
+            </div>
+            <div>
+                Общее число акций, обращающихся на Московской бирже: <b>221&nbsp;556&nbsp;000 штук.</b>
+            </div>
+
+        <h2>Таблица с ценами закрытия за апрель</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Дата</th>
+                    <th>Цена закрытия</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>03.04.2023</td>
+                    <td>14.7</td>
+                </tr>
+                <tr>
+                    <td>04.04.2023</td>
+                    <td>14.36</td>
+                </tr>
+                <tr>
+                    <td>05.04.2023</td>
+                    <td>14.56</td>
+                </tr>
+                <tr>
+                    <td>06.04.2023</td>
+                    <td>14.4</td>
+                </tr>
+                <tr>
+                    <td>07.04.2023</td>
+                    <td>14.5</td>
+                </tr>
+                <tr>
+                    <td>10.04.2023</td>
+                    <td>14.96</td>
+                </tr>
+                <tr>
+                    <td>11.04.2023</td>
+                    <td>14.52</td>
+                </tr>
+                <tr>
+                    <td>12.04.2023</td>
+                    <td>14.62</td>
+                </tr>
+                <tr>
+                    <td>13.04.2023</td>
+                    <td>14.58</td>
+                </tr>
+                <tr>
+                    <td>14.04.2023</td>
+                    <td>14.6</td>
+                </tr>
+                <tr>
+                    <td>17.04.2023</td>
+                    <td>14.66</td>
+                </tr>
+                <tr>
+                    <td>18.04.2023</td>
+                    <td>14.72</td>
+                </tr>
+                <tr>
+                    <td>19.04.2023</td>
+                    <td>14.4</td>
+                </tr>
+                <tr>
+                    <td>20.04.2023</td>
+                    <td>14.32</td>
+                </tr>
+                <tr>
+                    <td>21.04.2023</td>
+                    <td>14.22</td>
+                </tr>
+                <tr>
+                    <td>24.04.2023</td>
+                    <td>14.28</td>
+                </tr>
+                <tr>
+                    <td>25.04.2023</td>
+                    <td>14.18</td>
+                </tr>
+                <tr>
+                    <td>26.04.2023</td>
+                    <td>14.22</td>
+                </tr>
+                <tr>
+                    <td>27.04.2023</td>
+                    <td>14.08</td>
+                </tr>
+                <tr>
+                    <td>28.04.2023</td>
+                    <td>13.9</td>
+                </tr>
+            </tbody>
+        </table>
+
+    <div id="min" ></div>
+    <div id="max" ></div>
+    <div id="otklonenie"></div>
+
+    <script>
+        let data = ['03.04.2023', '4.04.2023', '05.04.2023', '06.04.2023', '07.04.2023',
+                    '10.04.2023', '11.04.2023', '12.04.2023', '13.04.2023', '14.04.2023', 
+                    '17.04.2023', '18.04.2023', '19.04.2023', '20.04.2023', '21.04.2023',
+                    '24.04.2023', '25.04.2023', '26.04.2023', '27.04.2023', '28.04.2023']
+    
+        let kurs = [14.7, 14.36, 14.56, 14.4, 14.5, 14.96, 14.52, 14.62, 14.58, 14.6,
+                    14.66, 14.72, 14.4, 14.32, 14.22, 14.28, 14.18, 14.22, 14.08, 13.9];
+            let min = Math.min(...kurs);
+            document.getElementById('min').innerHTML = 'Минимальное значение: ' + min;
+            let max = Math.max(...kurs);
+            document.getElementById('max').innerHTML = 'Максимальное значение: ' + max;
+            let sum = 0;
+            for (let i = 0; i < kurs.length; i++) {
+            sum += kurs[i];
+            }
+            let avg = sum / kurs.length;
+            let variance = 0;
+            for (let i = 0; i < kurs.length; i++) {
+            variance += Math.pow(kurs[i] - avg, 2);
+            }
+            let otklonenie = Math.sqrt(variance / kurs.length);
+            document.getElementById('otklonenie').innerHTML = 'Среднеквадратическое отклонение: ' + otklonenie;
+    </script>
+    </main>
+    <footer>
+    </footer>
+</body>
+</html>
