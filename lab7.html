@@ -97,7 +97,19 @@
                 tr.appendChild(tdR);
                 table.appendChild(tr);
             }
-            
+            let sum = 0;
+            for(let i = 0; i < kurs.length; i++) {
+                sum = sum + kurs[i];
+            }
+            let middle = sum / kurs.length;
+            document.getElementById('middle').innerHTML = 'Среднее значение: ' + middle;
+
+            let min = Math.min(...kurs);
+            document.getElementById('min').innerHTML = 'Минимальное значение: '+ min;
+
+            let max = Math.max(...kurs);
+            document.getElementById('max').innerHTML = 'Максимальное значение: ' + max;
+        }
     </script>
 </head>
 <body>
@@ -105,6 +117,29 @@
         НГТУ, ФБ, Лабораторная работа 7
     </header>
     <main>
+        <button onclick="addBlocks()">Создать блоки</button>
+        <div id="blocks"></div>
+
+        <button onclick="showExchange()">Курс доллара</button>
+        <table border="1" id="dollar-exchange"></table>
+        <div id="detail"></div>
+
+        <button onclick="atb()">Создать полупрозрачные блоки</button>
+        <div id="trbl"></div>
+
+        <label>Введите количество кругов:</label>
+        <input type="number" value="5" placeholder="Введите число кругов" id="numCurcles">
+        <button onclick="createCircles()">синий/красный</button>
+        <div id="circles"></div>
+
+        <button onclick="umn()">Умножение на 21</button>
+        <div id="um"></div>
+
+        <button onclick="KursAct()"> Курс акций компании Норникель:</button>
+        <table border="3" id="rusal"></table>
+        <div id="middle"></div>
+        <div id="min"></div>
+        <div id="max" style="margin-bottom: 20px;"></div>
 
     </main>
     <footer>
