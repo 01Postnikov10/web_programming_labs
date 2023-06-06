@@ -34,6 +34,35 @@
             let average = sum / exchange.length;
             document.getElementById('detail').innerHTML = 'Среднее значение' + average;
         }
+        function atb(){
+            let colors = document.getElementById('trbl');
+            for(let i = 0; i<10; i++){
+                let box = document.createElement('div');
+                box.style.width = '50px';
+                box.style.height = '50px';
+                box.style.backgroundColor = 'red';
+                box.style.opacity = i/10;
+                colors.appendChild(box);
+            }
+        }
+        function createCircles() {
+            let numCurcles = document.getElementById('numCurcles').value;
+            let circles = document.getElementById('circles');
+            for (let i = numCurcles; i > 0; i--){
+                let circle = document.createElement('div');
+                circle.style.width = '50px';
+                circle.style.height = '50px';
+                circle.style.borderRadius = '100px';
+                circle.style.textAlign = 'center';
+                if (i % 2 == 0){
+                    circle.style.backgroundColor = 'blue'
+                }
+                else {circle.style.backgroundColor = 'red'
+                }
+                circle.innerHTML = i;
+                circles.appendChild(circle);
+            }
+        }
     </script>
 </head>
 <body>
